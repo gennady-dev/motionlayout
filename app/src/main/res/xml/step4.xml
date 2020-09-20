@@ -28,17 +28,52 @@
                 motion:clickAction="toggle"
         />
 
-        <KeyFrameSet>
+        <!--<KeyFrameSet>
             <KeyPosition
                     motion:framePosition="50"
                     motion:motionTarget="@id/moon"
                     motion:keyPositionType="parentRelative"
                     motion:percentY="0.5"
             />
-            <!-- TODO: Add two more KeyPositions to the KeyFrameSet here -->
+            TODO: Add two more KeyPositions to the KeyFrameSet here
+            <KeyPosition
+                motion:framePosition="25"
+                motion:motionTarget="@id/moon"
+                motion:keyPositionType="parentRelative"
+                motion:percentY="0.6"
+                />
+            <KeyPosition
+                motion:framePosition="75"
+                motion:motionTarget="@id/moon"
+                motion:keyPositionType="parentRelative"
+                motion:percentY="0.6"
+                />
 
-        </KeyFrameSet>
-    </Transition>
+        </KeyFrameSet>-->
+        <!-- Complex paths example: Dancing moon -->
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="25"
+                motion:motionTarget="@id/moon"
+                motion:keyPositionType="parentRelative"
+                motion:percentY="0.6"
+                motion:percentX="0.1"
+                />
+            <KeyPosition
+                motion:framePosition="50"
+                motion:motionTarget="@id/moon"
+                motion:keyPositionType="parentRelative"
+                motion:percentY="0.5"
+                motion:percentX="0.3"
+                />
+            <KeyPosition
+                motion:framePosition="75"
+                motion:motionTarget="@id/moon"
+                motion:keyPositionType="parentRelative"
+                motion:percentY="0.6"
+                motion:percentX="0.1"
+                />
+        </KeyFrameSet>    </Transition>
 
     <!-- Constraints to apply at the start of the animation -->
     <ConstraintSet android:id="@+id/start">
